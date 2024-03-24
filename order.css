@@ -50,6 +50,37 @@
     border-color: red;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    min-height: 100vh;
+    padding-bottom: 70px;
+
+
+}
+
+   
+    .bildtest {
+        flex: 1; 
+        object-fit: cover; 
+        width: 100%; 
+    }
+   
+    .form-and-image-container {
+        display: flex; 
+        justify-content: center; 
+        align-items: stretch; 
+    }
+    
+    
+    .form-content {
+        flex: 1;
+        margin: 10px;
+       
+        max-width: 600px;
+    }
 
 
 
