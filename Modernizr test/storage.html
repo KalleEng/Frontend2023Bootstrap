@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage</title>
+</head>
+<body>
+
+    <h1>Web Storage API</h1>
+    <script>
+
+        console.log(localStorage);
+        localStorage.setItem("name", "Kareem")
+        localStorage.setItem("lname", "Kareem")
+
+        console.log(localStorage.getItem("name"));
+        
+
+        for(let i = 0; i < localStorage.length; i++) {
+        let key = localStorage.key(i)
+            console.log(key);
+        console.log(localStorage.getItem(key));
+
+
+        }
+        localStorage.clear();
+
+        const myArray = ['A', 'B', 'C']; //
+        localStorage.setItem("myArray", myArray); //Sparas som en sträng
+        localStorage.setItem("myArraygood", JSON.stringify(myArray)); //Stringify på arrayer och objekt 
+       //  console.log(myArray, [0]);
+       //  console.log(localStorage);
+        </script>
+        <script>
+
+    const myObject = {
+        first: 1,
+        second: 2,
+        third: 3,
+    }
+    console.log(myObject);
+    localStorage.setItem("myObject", myObject);
+    localStorage.setItem("myGoodObject", JSON.stringify(myObject));
+    console.log(myObjFromLW)
+
+
+
+
+
+
+</script>
+    
+</body>
+</html>
