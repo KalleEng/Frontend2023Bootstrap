@@ -1,13 +1,15 @@
 #form {
     max-width: 800px;
     margin: auto;
+    
+    max-height: 400;
     padding: 20px;
-   
     width: 400px;
     margin: auto;
-    padding: 20px;
+    margin-top: 40px;
+    
     background-color: #f8f9fa;
-    padding: 20px;
+    
     border-radius: 10px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     
@@ -15,12 +17,14 @@
 
 #form h1 {
     text-align: center;
- }
+}
 
  #form button {
     padding: 10px;
     margin-top: 10px;
     width: 100%;
+    background-color: bisque;
+    border-color: white;
  }
 
    
@@ -48,6 +52,10 @@
 
 .input-control.error input {
     border-color: red;
+    text-decoration: double;
+}
+.error {
+    font-size: 15px
 }
 
 .container {
@@ -81,6 +89,7 @@
        
         max-width: 600px;
     }
+
 
 
 
