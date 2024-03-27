@@ -19,9 +19,7 @@
     border-radius: 10px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     box-sizing: border-box;
-    border: 2px solid #02111B; /* Light grey border */
-     z-index: 2; 
-
+      z-index: 2; 
      animation: fadeIn 3s ease-out forwards;
 
 }
