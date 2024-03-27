@@ -54,7 +54,7 @@ const setError = (element, message) => {
     if(emailValue.length <= 50 && emailValue.includes("@")) {
     setSuccess(emailField);
   }else {
-    setError(emailField, "Fill in your email address.")
+    setError(emailField, "Fill in your email address with a @.")
     }
    
   

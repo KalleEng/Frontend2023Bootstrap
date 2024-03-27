@@ -24,7 +24,7 @@ body {
     margin-top: 40px;
     
     
-    background-color: #F7F7FF;
+    background-color: gainsboro;
     
     border-radius: 10px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
@@ -33,6 +33,7 @@ body {
      z-index: 2; 
 
      animation: fadeIn 3s ease-out forwards;
+   
 
      
 }
