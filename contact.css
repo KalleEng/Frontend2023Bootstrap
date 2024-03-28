@@ -1,13 +1,11 @@
-.image-container img {
-    height: 300px;
-    position: absolute;
-}
+
+
 .site-contactform {
   
     max-width: 800px;
     margin: auto;
     
-    max-height: 400;
+  
     padding: 20px;
     width: 400px;
     margin: auto;
@@ -35,7 +33,8 @@
     display: contents;
   }
   
-  .site-contactform-container, .site-text-container {
+  .site-contactform-container, 
+  .site-text-container {
     padding: 20px; 
   }
   
