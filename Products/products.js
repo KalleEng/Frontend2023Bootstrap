@@ -34,7 +34,7 @@ function createCards(products) {
                         <h5 class="card-title">${product.title}</h5>
                             <div class="bread-container">
                                 <p class="card-text">Price: $${product.price}</p>
-                                <button class="btn-custom" onclick="addToCart(${product.id})">Purchase</button>
+                                <button class="btn-custom" onclick="addToCart(${product.id})">Add to cart</button>
                             </div>
                     </div>
         </div>`;
@@ -43,11 +43,10 @@ function createCards(products) {
 }
 
 function addToCart(productId){
+    let cartList = JSON.parse(localStorage.getItem("cartList")) || [];
     const productToCart = productList.find(product => product.id === productId);
-    localStorage.setItem("productToCart", JSON.stringify(productToCart));
-    let productFromLS = JSON.parse(localStorage.getItem("productToCart"));
-    console.log(productFromLS);
-    window.location.href="../Order/order.html";
+    cartList.push(productToCart);
+    localStorage.setItem("cartList", JSON.stringify(cartList));
 }
 
 const mensClothing = encodeURIComponent("men's clothing")

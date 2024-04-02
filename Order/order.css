@@ -8,32 +8,20 @@
     }
 }
 
-
-
 #form {
-
     max-width: 800px;
     margin: auto;
-
     max-height: 400;
     padding: 20px;
     width: 400px;
     margin: auto;
     margin-top: 40px;
-
-
     background-color: gainsboro;
-
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-
     z-index: 2;
-
     animation: fadeIn 3s ease-out forwards;
-
-
-
 }
 
 #form h1 {
@@ -54,12 +42,7 @@
     border-radius: 25px;
     cursor: pointer;
     border: 2px solid #3F4045;
-
-
 }
-
-
-
 
 .input-control {
     display: flex;
@@ -75,22 +58,16 @@
     width: 100%;
 }
 
-.input-control input:focus {
-    outline: 0;
-}
+.input-control input:focus {outline: 0;}
 
-.input-control.success input {
-    border-color: green;
-}
+.input-control.success input {border-color: green;}
 
 .input-control.error input {
     border-color: red;
     text-decoration: double;
 }
 
-.error {
-    font-size: 15px
-}
+.error {font-size: 15px}
 
 .container {
     overflow: auto;
@@ -119,7 +96,6 @@
 .form-content {
     flex: 1;
     margin: 10px;
-
     max-width: 600px;
 }
 

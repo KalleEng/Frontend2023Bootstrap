@@ -17,7 +17,6 @@
     display: inline-block;
     left: 0;
     top: 0;
-    
   }
 
 .dropdown-content {
@@ -53,7 +52,7 @@
 }
 
 .card-title{
-    font-family: 'Spline Sans Mono';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 400;
     font-size: medium;
     text-align: center;
@@ -101,15 +100,6 @@
 
 }
 
-.btn-custom{
-    background-color: #000000;
-    font-family: 'Spline Sans Mono';
-    font-size: small;
-    text-decoration: none;
-    color: #f8f9fa;
-    padding: 10px 20px;
-}
-
 
 ::-webkit-scrollbar-thumb{
     background: #343a40;
@@ -122,13 +112,6 @@
 ::-webkit-scrollbar{
     width: 15px;
 }
-
-.spline-sans mono-font {
-    font-family: 'Spline Sans Mono', monospace;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-  }
 
   .eb-garamond {
     font-family: "EB Garamond", serif;
