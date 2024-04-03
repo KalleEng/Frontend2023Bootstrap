@@ -1,10 +1,35 @@
+class Product {
+    constructor(id, image,title, price, description, category, rating, quantity) {
+        this.id = id;
+        this.image = image;
+        this.title = title;
+        this.price = price;
+        this.description = description;
+        this.category = category;
+        this.rating = rating;
+        this.quantity = quantity;
+    }
+}
 
 let productList;
 
 async function fetchProducts() {
     let resp = await fetch(`https://fakestoreapi.com/products`);
     productList = await resp.json();
-    createCards(productList);
+
+    let products = productList.map(product => {
+        return new Product(
+            product.id,
+            product.image,
+            product.title,
+            product.price,
+            product.description,
+            product.category,
+            product.rating,
+            1 //quantity
+        );
+    });
+    createCards(products);
 }
 
 function filterByCategory(apiCategory) {
@@ -45,7 +70,15 @@ function createCards(products) {
 function addToCart(productId){
     let cartList = JSON.parse(localStorage.getItem("cartList")) || [];
     const productToCart = productList.find(product => product.id === productId);
-    cartList.push(productToCart);
+    let existingProduct = cartList.find(item => item.id === productId);
+
+    if(existingProduct){
+         existingProduct.quantity++;
+     } else{
+         productToCart.quantity = 1;
+         cartList.push(productToCart);
+     }
+    
     localStorage.setItem("cartList", JSON.stringify(cartList));
 }
 
@@ -79,11 +112,10 @@ const btnMappings =
 function populateButtons(btnMappings) {
     btnMappings.forEach(element => {
         document.getElementById(element.elementId).addEventListener('click', function () {
-            filterByCategory(element.urlPath)
+            filterByCategory(element.urlPath);
         })
     });
 }
 
 populateButtons(btnMappings);
 fetchProducts();
-
